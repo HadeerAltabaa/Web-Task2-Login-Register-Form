@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- Responsive Login & Registration Form -->
+<!-- This is the second task of the level 1 (Basic) where I will create a responsive login and registration form -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login & Registration Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- container -->
+    <div class="container">
+        <!-- Login Form -->
+        <form class="form-box login" id="loginForm">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock'></i>
+            </div>
+            <div class="forgot-link">
+                <a href="#">Forgot password</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <p>or login with social platfroms</p>
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-google'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </form>
+
+        <!-- Registration Form -->
+        <form class="form-box register" id="registerForm">
+            <h1>Registration</h1>
+            <div class="input-box">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" name="phone" placeholder="Phone Number (e.g., 0512345678)" pattern="05\d{8}"
+                    title="Saudi number starting with 05 and 10 digits total" required>
+                <i class='bx bxs-phone'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password"
+                    placeholder="Password (min 8 chars with letters, numbers, (@, _, /, -))"
+                    title="Must contain at least 8 characters with letters, numbers and special characters (@, _, /, -)"
+                    required>
+                <i class='bx bxs-lock'></i>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <p>or register with social platfroms</p>
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-google'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </form>
+
+        <!-- Toggle Button -->
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome!</h1>
+                <p>Don't have an account?</p>
+                <button type="button" class="btn register-btn">Register</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+                <button type="button" class="btn login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for messages -->
+    <div class="modal" id="messageModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <!-- Welcome Page -->
+    <div class="welcome-page" id="welcomePage">
+        <div class="welcome-content">
+            <h1>Welcome <span id="welcomeUsername"></span>!</h1>
+            <div class="user-info">
+                <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+                <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+                <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            </div>
+            <button class="btn logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
